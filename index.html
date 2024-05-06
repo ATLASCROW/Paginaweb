@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="imagenespng/CABECER.png" type="image/x-icon">
+  <title>COMPU BYTE</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="busqueda.js"></script>
+  <script src="carrito.js"></script>
+</head>
+<body>
+  <header>
+    <div class="text-logo"><img src="imagenespng/LOGO1.png" width="175" height="140" alt=""></div>
+    <div class="container">
+        <section class="textos-header">
+            <h1>COMPU BYTE</h1>
+            <h2>con tecnologia avanzada...</h2>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="acerca.html">Acerca de Nosotros</a></li>
+                <li><a href="formulario.php">Contactos</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Buscar...">
+            <button onclick="buscar()">Buscar</button>
+        </div>
+    </div>
+
+    <div class="cart-container">
+        <a href="carrito.html">
+            <button> <img src="imagenespng/carrito.png" alt=""></button>
+        </a>
+       </div>
+    </div>
+
+  </header>
+
+  <main class="container">
+    <h2 class="titulo">PRODUCTOS</h2>
+    <section id="productos">
+        <div class="producto">
+            <img src="imagenespng/Asus Chromebook.webp" alt="Producto 1">
+            <h2>Asus Chromebook de 16"</h2>
+            <p class="precio">Precio: USD$1.890</p>
+            <button class="custom-button" onclick="añadircarro('Asus Chromebook de 16', 1890, 'imagenespng/Asus Chromebook.webp')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+          </div>
+          
+          <div class="producto">
+            <img src="imagenespng/HP Elite.jpg" alt="Producto 2">
+            <h2>HP EliteBook 14"</h2>
+            <p class="precio">Precio: USD$2.500</p>
+            <button class="custom-button" onclick="añadircarro('HP EliteBook 14', 2.499, 'imagenespng/HP Elite.jpg')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="imagenespng/DELL ALIENWARE.jpg" alt="Producto 3">
+            <h2>DELL ALIENWARE 15.6"</h2>
+            <p class="precio">Precio: USD$999.99</p>
+            <button class="custom-button" onclick="añadircarro('DELL ALIENWARE 15.6', 999.99, 'imagenespng/DELL ALIENWARE.jpg')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+        </div>
+          
+        <div class="producto">
+            <img src="imagenespng/mac.jpg" alt="Producto 4">
+            <h2>MacBook Air 15"</h2>
+            <p class="precio">Precio: USD$979.50</p>
+            <button class="custom-button" onclick="añadircarro('MacBook Air 15', 979.50, 'magenespng/mac.jpg')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+        </div>
+        
+        <div class="producto">
+            <img src="imagenespng/Asus ExpertBook.jpg" alt="Producto 5">
+            <h2>Asus ExpertBook 15.6"</h2>
+            <p class="precio" >Precio: USD$499.00</p>
+            <button class="custom-button" onclick="añadircarro('Asus ExpertBook 15.6', 499.00, 'imagenespng/Asus ExpertBook.jpg')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+        </div>
+          
+        <div class="producto">
+            <img src="imagenespng/lenovo_yoga.jpg" alt="Producto 6">
+            <h2>Lenovo Yoga 13.3"</h2>
+            <p class="precio" >Precio: USD$1.199</p>
+            <button class="custom-button" onclick="añadircarro('Lenovo Yoga 13.3', 1.199, 'imagenespng/lenovo_yoga.jpg')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="imagenespng/Victus Gaming 15.jpg" alt="Producto 7">
+            <h2>Victus Gaming 15"</h2>
+            <p class="precio" >Precio: USD$1,269.00</p>
+            <button class="custom-button" onclick="añadircarro('Victus Gaming 15', 1,269.00, 'imagenespng/Victus Gaming 15.jpg')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+          </div>
+          
+          <div class="producto">
+            <img src="imagenespng/gateway_convertibles.jpg" alt="Producto 8">
+            <h2>Gateway Convertible 11.6"</h2>
+            <p class="precio" >Precio: USD$195.00</p>
+            <button class="custom-button" onclick="añadircarro('Gateway Convertible 11.6', 195.00, 'imagenespng/gateway_convertibles.jpg')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="imagenespng/DELL XPS.jpg" alt="Producto 9">
+            <h2>DELL XPS 15.6"</h2>
+            <p class="precio">Precio: USD$889.00</p>
+            <button class="custom-button" onclick="añadircarro('DELL XPS 15.6', 889.00, 'imagenespng/DELL XPS.jpg')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+        </div>
+          
+        <div class="producto">
+            <img src="imagenespng/Acer-Swift.png" alt="Producto 10">
+            <h2>Acer Swift 14"</h2>
+            <p class="precio">Precio: USD$539.99</p>
+            <button class="custom-button" onclick="añadircarro('Acer Swift 14', 539.99, 'imagenespng/Acer-Swift.png')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+        </div>
+        
+        <div class="producto">
+            <img src="imagenespng/Asus ROG.webp" alt="Producto 11">
+            <h2>Asus ROG 15"</h2>
+            <p class="precio">Precio: USD$300.149</p>
+            <button class="custom-button" onclick="añadircarro('Asus ROG 15', 300.149, 'imagenespng/Asus ROG.webp')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+        </div>
+          
+        <div class="producto">
+            <img src="imagenespng/MSI GS66 Stealth.jpg" alt="Producto ">
+            <h2>MSI GS66 Stealth 15.6"</h2>
+            <p class="precio">Precio: USD$2000.00</p>
+            <button class="custom-button" onclick="añadircarro('MSI GS66 Stealth 15.6', 2000.00, 'imagenespng/MSI GS66 Stealth.jpg')">Añadir al carrito</button>
+            <a href="pago.php">
+                <button>Comprar</button>
+            </a>
+        </div>
+      </section>
+      
+      <section class="about-servicios">
+        <div class="contenedor">
+            <h2 class="titulo">NUESTROS SERVICIOS</h2>
+            <div class="servicio-cont">
+                <div class="servicio-ind">
+                    <img src="imagenespng/domicilio.jpg" alt="">
+                    <h3>Entrega a Domicilio</h3>
+                    <p>Entrega a domicilio local, provincial e interprovincial.</p>
+                </div>
+                <div class="servicio-ind">
+                    <img src="imagenespng/pagos.png" alt="">
+                    <h3>Diferentes Metodos de Pago</h3>
+                    <p>Transferencia bancaria, App De una (Banco Pichincha y Banco de Loja), Tarjeta de crédito.</p>
+                </div>
+                <div class="servicio-ind">
+                    <img src="imagenespng/ayuda.png" alt="">
+                    <h3>Centro De Ayuda 24/7</h3>
+                    <p>¿Tengo una pregunta? Llame a un especialista o chatee en línea.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+  <footer>
+    <div class="contenedor-footer">
+        <div class="content-foo">
+            <img src="imagenespng/contacto.png" alt="">
+            <h4>Contactos</h4>
+            <p>0981168935</p>
+            <p>0980713056</p>
+        </div>
+        <div class="content-foo">
+            <img src="imagenespng/correo.png" alt="">
+            <h4>E-mails</h4>
+            <a href="mailto:lbsalinas@tecnologicoloja.edu.ec">lbsalinas@tecnologicoloja.edu.ec</a><br>
+            <a href="mailto:adcabrera@tecnologicoloja.edu.ec">adcabrera@tecnologicoloja.edu.ec</a>
+        </div>
+        <div class="content-foo">
+            <img src="imagenespng/mapa.png" alt="">
+            <h4>Ubicación</h4>
+            <a href="https://www.google.com/maps/place/Loja/@-4.0075942,-79.2495786,13z/data=!3m1!4b1!4m6!3m5!1s0x91cb480661b91d2d:0x8e12137cdc1eee09!8m2!3d-3.9952065!4d-79.2022123!16zL20vMDQxcHRu?entry=ttu">
+                LOJA</a>
+        </div>
+    </div>
+    <h2 class="Titulo-final">&copy; Anderson Cabera | Lizbeth Salinas</h2>
+</footer>
+<script>
+    let carrito = [];
+
+    function añadircarro(nombre, precio, imagen) {
+        carrito.push({ nombre, precio, imagen });
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+</script>
+
+</body>
+
+
+</html>

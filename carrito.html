@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagenespng/CABECER.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous"><!--enlaces de iconos-->
+    <link rel="stylesheet" href="estilo-carrito.css">
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="acerca.html">
+    <link rel="stylesheet" href="formulario.php">
+    <title>Finalizar Compra</title>
+</head>
+<body>
+<header>
+    <div class="text-logo"><img src="imagenespng/LOGO1.png" width="175" height="140" alt=""></div>
+    <div class="container">
+        <section class="textos-header">
+            <h1>COMPU BYTE</h1>
+            <h2>con tecnologia avanzada...</h2>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca.html">Acerca de Nosotros</a></li>
+                <li><a href="formulario.php">Contactos</a></li>
+            </ul>
+        </nav>
+    </div>
+  </header>
+  <main>
+    <div class="contendor-con">
+        <h1>Carrito de Compras</h1>
+        <div class="contenido">
+            <div class="checkout-container">
+                <h2>Carrito de compras</h2>
+                <ul id="lista-carrito">
+                    <!-- Aquí se mostrarán los productos del carrito -->
+                </ul>
+                <p>Total: $<span id="total-carrito">0.00</span></p>
+                <a href="pago.php">
+                    <button onclick>Pagar</button>
+                </a>
+                <a href="index.html">
+                    <button>Comprar mas</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    // Obtener el array de productos del carrito desde el almacenamiento local
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    // Función para mostrar los productos del carrito
+    function mostrarProductosCarrito() {
+        const listaCarrito = document.getElementById('lista-carrito');
+        let total = 0;
+
+        // Limpiar el contenido previo del carrito
+        listaCarrito.innerHTML = '';
+
+        // Recorrer cada producto en el carrito y agregarlo al HTML
+        carrito.forEach(producto => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <div>
+                    <h3>${producto.nombre}</h3>
+                    <p>Precio: $${producto.precio.toFixed(2)}</p>
+                    <button onclick="eliminarProducto('${producto.nombre}')">Eliminar</button>
+                </div>
+            `;
+            listaCarrito.appendChild(li);
+            total += producto.precio;
+        });
+
+        // Mostrar el total del carrito
+        document.getElementById('total-carrito').textContent = total.toFixed(2);
+    }
+
+    // Llamar a la función para mostrar los productos del carrito cuando se cargue la página
+    window.addEventListener('DOMContentLoaded', mostrarProductosCarrito);
+
+    function eliminarProducto(nombreProducto) {
+    // Filtrar el carrito para eliminar el producto con el nombre dado
+    carrito = carrito.filter(producto => producto.nombre !== nombreProducto);
+    
+    // Actualizar el localStorage con el nuevo contenido del carrito
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    
+    // Volver a renderizar la lista de productos en el carrito
+    renderizarCarrito();
+}
+
+// Función para renderizar la lista de productos en el carrito
+function renderizarCarrito() {
+    const listaCarrito = document.getElementById('lista-carrito');
+    // Limpiar la lista antes de renderizar los productos nuevamente
+    listaCarrito.innerHTML = '';
+    
+    // Renderizar cada producto en el carrito
+    carrito.forEach(producto => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}">
+            <div>
+                <h3>${producto.nombre}</h3>
+                <p>Precio: $${producto.precio.toFixed(2)}</p>
+                <button onclick="eliminarProducto('${producto.nombre}')">Eliminar</button>
+            </div>
+        `;
+        listaCarrito.appendChild(li);
+    });
+}
+
+// Llamar a la función para renderizar el carrito al cargar la página
+renderizarCarrito();
+
+function eliminarProducto(nombreProducto) {
+    // Filtrar el carrito para eliminar el producto con el nombre dado
+    carrito = carrito.filter(producto => producto.nombre !== nombreProducto);
+    
+    // Actualizar el localStorage con el nuevo contenido del carrito
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    
+    // Volver a renderizar la lista de productos en el carrito
+    renderizarCarrito();
+    
+    // Actualizar el precio total del carrito
+    mostrarProductosCarrito();
+}
+</script>
+
+
+</body>
+</html>

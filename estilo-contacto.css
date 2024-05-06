@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');/*Importar el tipo de tipografia que se va a utilizar*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'open sans';
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1000px ;
+    margin: auto;
+    overflow: hidden;
+  }
+  .titulo{
+    color: #332a64;
+    font-size: 30px;
+    text-align: center;
+    margin: 70px;
+}
+header {
+    background: #00f260;; 
+    background: -webkit-linear-gradient(to right,hsla(229, 96%, 46%, 0.437), hsla(98, 100%, 47%, 0.371)), url(imagenespng/fondo1.jpg); 
+    background: linear-gradient(to right, hsla(229, 96%, 46%, 0.437), hsla(98, 100%, 47%, 0.371)), url(imagenespng/fondo1.jpg); 
+    width: 100%;
+    height: 310px;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+  header .text-logo{
+    position: absolute;
+    margin: 35px 300px;
+}
+header .textos-header{
+    margin: 35px 0px;
+    display: flex;
+    height: 110px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.textos-header h1{
+    font-size: 75px;
+    color: #fff;
+}
+.textos-header h2{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+  
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+a{
+    text-decoration: none;
+}
+.contendor-con{
+    width: 900%;
+    max-width: 1050px;
+    background: #fff;
+    padding: 40px;
+    margin: 15px auto;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+}
+.contendor-con h1{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #15CF8A;
+}
+.contenido{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.contenido .info, 
+.contenido .formulario{
+    width: 50%;
+}
+
+.info{
+    padding-left: 10px;
+}
+.info .col{
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 16px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.info .col .icono{
+    color: #15CF8A;
+    margin-right: 10px;
+}
+.info .col p{
+    color: #999;
+}
+.info .redes-s{
+    width: 100%;
+    overflow: hidden;
+    padding-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.info .redes-s a{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: #15CF8A;
+    color: #fff;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, .4);
+}
+.info .redes-s a:hover{
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, .4);
+    background: #000;
+}
+.info .mapa iframe{
+    padding: 1px 2px;
+    display: flex;
+}
+
+form{
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    text-align: 6px left;
+    width: 340px;
+
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.h2{
+    color: #15CF8A;
+    font-size: 35px;
+}
+label{
+    color: #15CF8A;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+input, textarea{
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #999;
+    border: 2px solid #999;
+    color: #000;
+    outline: none;
+}
+input::placeholder, textarea::placeholder{
+    color: #b5cab6;
+}
+
+.btn{
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    border-radius: 25px;
+    background-color: #51d94c;
+    box-shadow: 0 0 20px rgba(25, 254, 0, 0.4);
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #000;
+}
